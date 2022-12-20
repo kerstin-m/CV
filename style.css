@@ -1,6 +1,35 @@
-h1 {
-  font-family: "Merriweather", serif;
+* {
+  box-sizing: border-box;
+  }
+  .header {
+    padding: 14px;
+    background-color: #d1d8e0;
+    text-align: center; }
+ 
+ 
+    .main {
+      max-width: 600px;
+      margin: 0px; 
+      padding: 16px;
+    }
+  
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
 }
+p,
+li,
+footer {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+a {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
 
 [href^="tel"] {
   color: black;
