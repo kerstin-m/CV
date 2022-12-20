@@ -1,26 +1,37 @@
-* {
+.header, .main, #contact {
   box-sizing: border-box;
-  }
-  .header, #contact {
-    padding: 10px;
-    margin: 20px;
-    background-color: #d1d8e0;
-    text-align: center; }
- 
- 
-    .main {
-      max-width: 600px;
-      margin: 0px; 
-      padding: 7px;
-    }
-  
+
+}
+.header,
+#contact {
+  background-color: #20B2AA;
+  text-align: center;
+  padding: 14px;
+}
+.navigation {
+  color: black;
+  padding 4px; 20px; 20px, 4px;
+  margin: 20px;
+}
+
+.main {
+margin: 0px;
+ padding: 0px 0px 0px 7px;
+}
 
 h1,
 h2,
 h3,
 h4 {
+  text-align: center;
   font-family: "Montserrat", sans-serif;
 }
+
+h4 {
+  text-align: left;
+}
+article + article 
+{ border-top: 5px solid #20B2AA;}
 p,
 li,
 footer {
@@ -30,11 +41,17 @@ footer {
 a {
   font-family: "Merriweather Sans", sans-serif;
 }
+a:hover {
+  background-color:#DCDCDC;
+}
 
-#contact {
-  padding: 14px;
-  text-align: center;
+a:active {
+  background-color: #D8BFD8;
 }
-[href^="tel"] {
-  color: black;
+
+li + li {
+  margin-top: 8px;
 }
+
+
+
