@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
   }
-  .header {
-    padding: 14px;
+  .header, #contact {
+    padding: 10px;
+    margin: 20px;
     background-color: #d1d8e0;
     text-align: center; }
  
@@ -10,7 +11,7 @@
     .main {
       max-width: 600px;
       margin: 0px; 
-      padding: 16px;
+      padding: 7px;
     }
   
 
@@ -30,7 +31,10 @@ a {
   font-family: "Merriweather Sans", sans-serif;
 }
 
-
+#contact {
+  padding: 14px;
+  text-align: center;
+}
 [href^="tel"] {
   color: black;
 }
