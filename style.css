@@ -40,6 +40,19 @@ h4 {
   font-family: "Montserrat", sans-serif;
 }
 
+.experience-heading
+{
+  display: inline-block;
+}
+
+.experience-time-subheading
+{ 
+  display: inline-block; 
+  text-align: right;
+  padding-right: 2px;
+  
+}
+
 h4 {
   text-align: left;
 }
