@@ -6,6 +6,11 @@
   color: #708090;
 }
 
+header {
+  position: sticky;
+  top: 0px;
+}
+
 .header,
 #contact {
   background-color: #20B2AA;
@@ -26,7 +31,19 @@ h1::after {
   content: '❕'
 }
 */
-
+.hireme {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25x;
+  color: #708090;
+  background-color: #FFF0F5;
+  border-radius: 10px;
+  width: 120px;
+  height: 30px;
+  padding-top: 10px;
+}
 .main {
 margin: 0px;
  padding: 0px 0px 0px 7px;
@@ -50,6 +67,9 @@ h4 {
   display: inline-block; 
   text-align: right;
   padding-right: 2px;
+  position: relative;
+  right: -20px;
+  
   
 }
 
