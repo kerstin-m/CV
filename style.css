@@ -23,6 +23,32 @@ header {
   margin: 20px;
 }
 
+.beside {
+  display: block;
+  background-color: lightgrey;
+  width: 175px;
+  position: sticky
+  box-sizing: border-box; 
+  padding-bottom: 0px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  margin: 0px 20px 0px 0px;
+}
+
+.ÜberschriftKontaktblock {
+  text-align: left;
+  border: 2px solid black;
+  margin-top: 0px;
+}
+.subheadinggoodtoknow{
+  border: 2px solid black;
+  margin-top: 0px;
+}
+
+.Geburt {
+  padding: 0px;
+  display: inline-block 
+}
 /*
 h1::before {
   content:'❕'
