@@ -1,54 +1,71 @@
 * {
   box-sizing: border-box;
 }
+
+html {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
+
+}
 ::selection {
   background-color: #FFF0F5;
   color: #708090;
 }
 
-header {
-  position: sticky;
-  top: 0px;
+.heading-group {
+ font-size: 4rem; 
+}
+.main-heading {
+  font-size: 2rem;
 }
 
+header {
+  position: sticky;
+  top: 0;
+}
+.profession
+{
+  font-size: 25%;
+}
 .header,
 #contact {
   background-color: #20B2AA;
   text-align: center;
-  padding: 14px;
+  padding: 1em;
 }
 .navigation {
   color: black;
   padding 4px; 20px; 20px, 4px;
-  margin: 20px;
+  margin: 2em; 
 }
 
 .beside {
+  max-width: 40ch;
   display: block;
   background-color: lightgrey;
-  width: 175px;
+  width: 25%;
   position: sticky
   box-sizing: border-box; 
-  padding-bottom: 0px;
-  padding-left: 5px;
-  padding-bottom: 10px;
-  margin: 0px 20px 0px 0px;
+  padding-bottom: 0;
+  padding-left: 0,5rem;
+  padding-bottom: 0,5rem;
 }
 
 .ÜberschriftKontaktblock {
   text-align: left;
   border: 2px solid black;
-  margin-top: 0px;
+  margin-top: 0
 }
 .subheadinggoodtoknow{
   border: 2px solid black;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .Geburt {
-  padding: 0px;
+  padding: 0
   display: inline-block 
 }
+
 /*
 h1::before {
   content:'❕'
@@ -58,22 +75,22 @@ h1::after {
 }
 */
 .hireme {
-position: fixed;
-top:2px;
-right: 10px;
+position: absolute;
+top: 1rem;
+right: 0,5rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  font-size: 100%;
   text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
+
   color: #708090;
   background-color: #FFF0F5;
-  border: lightblue 5px solid;
-  border-radius: 60px;
+  border-radius: 20rem;
+  padding: 1em;
 }
 .main {
-margin: 0px;
- padding: 0px 0px 0px 7px;
+  max-width: 100ch;
+margin: 0;
+ padding: 0 0 0 1em;
 }
 
 h1,
@@ -93,9 +110,9 @@ h4 {
 { 
   display: inline-block; 
   text-align: right;
-  padding-right: 2px;
+  padding-right: 2em;
   position: relative;
-  right: -20px;
+  right: -2em;
   
   
 }
@@ -104,16 +121,8 @@ h4 {
   text-align: left;
 }
 article + article 
-{ border-top: 5px solid #20B2AA;}
-p,
-li,
-footer {
-  font-family: "Merriweather Sans", sans-serif;
-}
+{ border-top: 0.2em solid #20B2AA;}
 
-a {
-  font-family: "Merriweather Sans", sans-serif;
-}
 a:hover {
   background-color:#DCDCDC;
 }
@@ -123,8 +132,7 @@ a:active {
 }
 
 li + li {
-  margin-top: 8px;
+  margin-top: 0.5em;
 }
-
 
 
