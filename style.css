@@ -50,33 +50,6 @@ header {
   margin: 2em; 
 }
 
-.beside {
-  max-width: 40ch;
-  display: block;
-  background-color: lightgrey;
-  width: 25%;
-  position: sticky
-  box-sizing: border-box; 
-  padding-bottom: 0;
-  padding-left: 0,5rem;
-  padding-bottom: 0,5rem;
-}
-
-.ÜberschriftKontaktblock {
-  text-align: left;
-  border: 2px solid black;
-  margin-top: 0
-}
-.subheadinggoodtoknow{
-  border: 2px solid black;
-  margin-top: 0;
-}
-
-.Geburt {
-  padding: 0
-  display: inline-block 
-}
-
 /*
 h1::before {
   content:'❕'
@@ -115,14 +88,36 @@ padding: 0,5rem;
       display: none;
     }
   }
-.main {
+  .therealmain {
+    display: flex;
+    flex-direction: row;
+    }
+
+    .beside {
+      max-width: 40ch;
+      background-color: lightgrey;
+      width: 25%;
+      position: sticky
+      padding-bottom: 0;
+      padding-left: 0,5rem;
+      padding-bottom: 0,5rem;
+    }
+    
+    .ÜberschriftKontaktblock {
+      text-align: left;
+      
+      margin-top: 0
+    }
+    
+    
+  .Profil-und-mehr {
   max-width: 100ch;
 margin: 0;
  padding: 0 0 0 1em;
-}
+ }
 @media screen and (min-width: 786px)
 {
-.main > * + *  {
+.Profil-und-mehr > * + *  {
   margin-top: 2em;
 }  
 }
@@ -135,21 +130,7 @@ h4 {
   font-family: "Montserrat", sans-serif;
 }
 
-.experience-heading
-{
-  display: inline-block;
-}
 
-.experience-time-subheading
-{ 
-  display: inline-block; 
-  text-align: right;
-  padding-right: 2em;
-  position: relative;
-  right: -2em;
-  
-  
-}
 
 h4 {
   text-align: left;
