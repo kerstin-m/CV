@@ -7,6 +7,15 @@ html {
   font-size: 16px;
 }
 
+body {
+  margin: 0;
+}
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
 @media screen and (min-width: 786px) {
  html { 
   font-size: 18px;
@@ -38,11 +47,13 @@ header {
 {
   font-size: 25%;
 }
-.header,
+header,
 #contact {
   background-color: #20B2AA;
   text-align: center;
   padding: 1em;
+
+
 }
 .navigation {
   color: black;
@@ -50,7 +61,7 @@ header {
   margin: 2em; 
 }
 
-/*
+/* Das finde ich zu häßlich;-)
 h1::before {
   content:'❕'
 }
@@ -110,7 +121,7 @@ padding: 0,5rem;
     }
     
     
-  .Profil-und-mehr {
+  article {
   max-width: 100ch;
 margin: 0;
  padding: 0 0 0 1em;
@@ -131,12 +142,26 @@ h5 {
   font-family: "Montserrat", sans-serif;
 }
 
-
-
 h4,
 h5 {
-  text-align: left;
+  text-align: left; 
 }
+
+h5 {
+  margin-top: 0;
+  font-size: 90%;
+}
+.experience-heading {
+  display: inline-block;
+  width: 22rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.experience-time-subheading {
+  display: inline-block;
+ 
+}
+
 article + article 
 { border-top: 0.2em solid #20B2AA;}
 
