@@ -36,6 +36,7 @@ main {
 
 .heading-group {
  font-size: 4rem; 
+ padding-left: 2rem;
 }
 .main-heading {
   font-size: 2rem;
@@ -43,9 +44,11 @@ main {
 
 header {
   position: flexible;
-  top: 0;
+  margin-top: 0;
+  padding-top: 0;
   background: rgb(34,193,195);
   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,226,1) 100%);
+
 
 }
 .profession
@@ -154,6 +157,13 @@ h5 {
   margin-top: 0;
   font-size: 90%;
 }
+
+nav>ul>li {
+list-style: none;
+display: inline;
+}
+
+
 .experience-heading {
   display: inline-block;
   width: 22rem;
@@ -164,6 +174,7 @@ h5 {
   display: inline-block;
  
 }
+
 
 article + article 
 { border-top: 0.2em solid #20B2AA;}
