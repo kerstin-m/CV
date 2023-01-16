@@ -10,10 +10,12 @@ html {
 body {
   margin: 0;
 }
-.main {
+main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
+  display: flex;
+
 }
 
 @media screen and (min-width: 786px) {
@@ -40,14 +42,17 @@ body {
 }
 
 header {
-  position: sticky;
+  position: flexible;
   top: 0;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,226,1) 100%);
+
 }
 .profession
 {
   font-size: 25%;
 }
-header,
+
 #contact {
   background-color: #20B2AA;
   text-align: center;
@@ -70,18 +75,16 @@ h1::after {
 }
 */
 .hireme {
-position: absolute;
-top: 1rem;
-margin-right: 1rem;
-padding: 0,5rem;
+position: flexible;
+display: inline-block;
+margin:  0 0 0 30em;
+padding: 1em;
   font-family: "Montserrat", sans-serif;
-  font-size: 100%;
+  font-size: 25%;
   text-align: center;
-
   color: #708090;
   background-color: #FFF0F5;
   border-radius: 20rem;
-  padding: 1em;
 }
 @media screen and (min-width: 786px) {
   .hireme { 
