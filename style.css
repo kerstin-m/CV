@@ -5,6 +5,29 @@
 html {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 16px;
+  /*Ich habe alle Customer Properties im HTML angelegt, weil sie für header & body gelten. Ist das korekt?)*/
+  --main-color: #34495e;
+  --background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(45, 253, 226, 1) 100%
+  );
+  --background-selection: #fff0f5;
+  --color-selection: #008080;
+  --background-beside: #dcdcdc;
+  --background-hover-active: #d8bfd8;
+  --color-borderline: #20b2aa;
+  --background-color-dark-scheme: #000000;
+  --color-dark-scheme: #ffffff;
+}
+
+header {
+  position: relative;
+  margin: 0;
+  /*einmal zur Probe/ Erklärung auf null setzen*/
+  padding: 1rem;
+  color: var(--main-color);
+  background: var(--background);
 }
 
 body {
@@ -15,58 +38,54 @@ main {
   margin: 0 auto;
   padding: 16px;
   display: flex;
-
+  color: var(--main-color);
 }
 
 @media screen and (min-width: 786px) {
- html { 
-  font-size: 18px;
-  
+  html {
+    font-size: 18px;
   }
   .hireme {
     position: relative;
   }
 }
 
+/*Funktioniert nicht?*/
+@media screen and (prefers-color-scheme: dark) {
+  background-color: var(--background-color-dark-scheme);
+  color: var(--color-dark-scheme);
+}
 
 ::selection {
-  background-color: #FFF0F5;
-  color: #708090;
+  background-color: var(--background-selection);
+  color: var(--color-selection);
 }
 
 .heading-group {
- font-size: 4rem; 
- padding-left: 2rem;
+  font-size: 4rem;
+  padding-left: 2rem;
 }
 .main-heading {
   font-size: 2rem;
 }
 
-header {
-  position: flexible;
-  margin-top: 0;
-  padding-top: 0;
-  background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,226,1) 100%);
-
-
+footer {
+  color: var(--main-color);
+  background: var(--background);
+  /*Wie kann ich die Farbschattierung umdrehen? Über die Keywords schaffe ich es nicht?*/
 }
-.profession
-{
+.profession {
   font-size: 25%;
 }
 
 #contact {
-  background-color: #20B2AA;
   text-align: center;
   padding: 1em;
-
-
 }
 .navigation {
-  color: black;
-  padding 4px; 20px; 20px, 4px;
-  margin: 2em; 
+  color: var(--main-color);
+  padding: 0.75em;
+  margin: 1em;
 }
 
 /* Das finde ich zu häßlich;-)
@@ -77,66 +96,61 @@ h1::after {
   content: '❕'
 }
 */
+/*Ich werde noch verrückt mit dem hireme- wie kann ich richtig positionieren?(-:)*/
 .hireme {
-position: flexible;
-display: inline-block;
-margin:  0 0 0 30em;
-padding: 1em;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 1em;
   font-family: "Montserrat", sans-serif;
   font-size: 25%;
   text-align: center;
-  color: #708090;
-  background-color: #FFF0F5;
+  color: var(--main-color);
+  background-color: var(--background-selection);
   border-radius: 20rem;
 }
 @media screen and (min-width: 786px) {
-  .hireme { 
-   position: fixed;
-   }
+  .hireme {
+    position: fixed;
   }
-  @media print {
-    .hireme {
-      display: none;
-    }
-    .navigation {
-      display: none;
-    }
-    #contact {
-      display: none;
-    }
+}
+@media print {
+  .hireme {
+    display: none;
   }
-  .therealmain {
-    display: flex;
-    flex-direction: row;
-    }
+  .navigation {
+    display: none;
+  }
+  #contact {
+    display: none;
+  }
+}
 
-    .beside {
-      max-width: 40ch;
-      background-color: lightgrey;
-      width: 25%;
-      position: sticky
-      padding-bottom: 0;
-      padding-left: 0,5rem;
-      padding-bottom: 0,5rem;
-    }
-    
-    .ÜberschriftKontaktblock {
-      text-align: left;
-      
-      margin-top: 0
-    }
-    
-    
-  article {
+.beside {
+  max-width: 40ch;
+  background-color: var(--background-beside);
+  width: 25%;
+  position: sticky;
+  padding-bottom: 0;
+  padding-left: 0, 5rem;
+  padding-bottom: 0, 5rem;
+}
+
+.ÜberschriftKontaktblock {
+  text-align: left;
+
+  margin-top: 0;
+}
+
+article {
   max-width: 100ch;
-margin: 0;
- padding: 0 0 0 1em;
- }
-@media screen and (min-width: 786px)
-{
-.Profil-und-mehr > * + *  {
-  margin-top: 2em;
-}  
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+@media screen and (min-width: 786px) {
+  .Profil-und-mehr > * + * {
+    margin-top: 2em;
+  }
 }
 
 h1,
@@ -150,7 +164,7 @@ h5 {
 
 h4,
 h5 {
-  text-align: left; 
+  text-align: left;
 }
 
 h5 {
@@ -158,11 +172,10 @@ h5 {
   font-size: 90%;
 }
 
-nav>ul>li {
-list-style: none;
-display: inline;
+nav > ul > li {
+  list-style: none;
+  display: inline;
 }
-
 
 .experience-heading {
   display: inline-block;
@@ -172,23 +185,20 @@ display: inline;
 }
 .experience-time-subheading {
   display: inline-block;
- 
 }
 
-
-article + article 
-{ border-top: 0.2em solid #20B2AA;}
+article + article {
+  border-top: 0.2em solid var(--color-borderline);
+}
 
 a:hover {
-  background-color:#DCDCDC;
+  background-color: var(--background-beside);
 }
 
 a:active {
-  background-color: #D8BFD8;
+  background-color: var(--background-hover-active);
 }
 
 li + li {
   margin-top: 0.5em;
 }
-
-
