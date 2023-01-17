@@ -2,13 +2,16 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 16px;
-  /*Ich habe alle Customer Properties im HTML angelegt, weil sie für header & body gelten. Ist das korekt?)*/
+:root {
   --main-color: #34495e;
-  --background: linear-gradient(
-    0deg,
+  --background-direction: 180deg;
+  --background-header: linear-gradient(
+    var(--background-direction),
+    rgba(34, 193, 195, 1) 0%,
+    rgba(45, 253, 226, 1) 100%
+  );
+  --background-footer: linear-gradient(
+    var(--background-direction),
     rgba(34, 193, 195, 1) 0%,
     rgba(45, 253, 226, 1) 100%
   );
@@ -21,22 +24,22 @@ html {
   --color-dark-scheme: #ffffff;
 }
 
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1em;
+  margin: 0;
+}
+
 header {
   position: relative;
   margin: 0;
-  /*einmal zur Probe/ Erklärung auf null setzen*/
-  padding: 1rem;
   color: var(--main-color);
-  background: var(--background);
+  background: var(--background-header);
 }
 
-body {
-  margin: 0;
-}
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 16px;
   display: flex;
   color: var(--main-color);
 }
@@ -50,10 +53,11 @@ main {
   }
 }
 
-/*Funktioniert nicht?*/
-@media screen and (prefers-color-scheme: dark) {
-  background-color: var(--background-color-dark-scheme);
-  color: var(--color-dark-scheme);
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark-scheme);
+    color: var(--color-dark-scheme);
+  }
 }
 
 ::selection {
@@ -67,11 +71,12 @@ main {
 }
 .main-heading {
   font-size: 2rem;
+  margin-top: 0;
 }
 
 footer {
   color: var(--main-color);
-  background: var(--background);
+  background: var(--background-footer);
   /*Wie kann ich die Farbschattierung umdrehen? Über die Keywords schaffe ich es nicht?*/
 }
 .profession {
@@ -84,8 +89,9 @@ footer {
 }
 .navigation {
   color: var(--main-color);
-  padding: 0.75em;
-  margin: 1em;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: 0.25em;
 }
 
 /* Das finde ich zu häßlich;-)
@@ -96,7 +102,6 @@ h1::after {
   content: '❕'
 }
 */
-/*Ich werde noch verrückt mit dem hireme- wie kann ich richtig positionieren?(-:)*/
 .hireme {
   position: absolute;
   right: 1rem;
@@ -109,11 +114,7 @@ h1::after {
   background-color: var(--background-selection);
   border-radius: 20rem;
 }
-@media screen and (min-width: 786px) {
-  .hireme {
-    position: fixed;
-  }
-}
+
 @media print {
   .hireme {
     display: none;
@@ -199,6 +200,7 @@ a:active {
   background-color: var(--background-hover-active);
 }
 
+/*kann ich die ul-Elemente umdrehen?*/
 li + li {
   margin-top: 0.5em;
 }
