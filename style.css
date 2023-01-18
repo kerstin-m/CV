@@ -4,14 +4,15 @@
 
 :root {
   --main-color: #34495e;
-  --background-direction: 180deg;
+  --background-direction-header: 0deg;
   --background-header: linear-gradient(
-    var(--background-direction),
+    var(--background-direction-header),
     rgba(34, 193, 195, 1) 0%,
     rgba(45, 253, 226, 1) 100%
   );
+  --background-direction-footer: 180deg;
   --background-footer: linear-gradient(
-    var(--background-direction),
+    var(--background-direction-footer),
     rgba(34, 193, 195, 1) 0%,
     rgba(45, 253, 226, 1) 100%
   );
@@ -92,6 +93,7 @@ footer {
   padding: 0.25em;
   margin: 0.25em;
   border-radius: 0.25em;
+  transition: background-color 0.5s;
 }
 
 /* Das finde ich zu häßlich;-)
@@ -112,6 +114,7 @@ h1::after {
   text-align: center;
   color: var(--main-color);
   background-color: var(--background-selection);
+  transition: background-color 0.5s;
   border-radius: 20rem;
 }
 
@@ -189,11 +192,17 @@ nav > ul > li {
 }
 
 article + article {
-  border-top: 0.2em solid var(--color-borderline);
+  border-bottom: 0.2em solid var(--color-borderline);
 }
 
 a:hover {
   background-color: var(--background-beside);
+}
+
+/*Warum verhält sich focus wie aktive? */
+a:focus {
+  background-color: (var(--background-selection));
+  border: 0.01em dotted #34495e;
 }
 
 a:active {
