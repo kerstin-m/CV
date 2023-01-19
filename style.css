@@ -114,8 +114,12 @@ h1::after {
   text-align: center;
   color: var(--main-color);
   background-color: var(--background-selection);
-  transition: background-color 0.5s;
+  transition: background-color 1s;
   border-radius: 20rem;
+}
+
+header:hover .hireme {
+  transform: scale(1.2);
 }
 
 @media print {
@@ -209,7 +213,13 @@ a:active {
   background-color: var(--background-hover-active);
 }
 
-/*kann ich die ul-Elemente umdrehen?*/
+/*kann ich die ol-Elemente umdrehen?*/
+ol {
+  list-style: disc;
+}
+ol li::marker {
+  color: var(--color-borderline);
+}
 li + li {
   margin-top: 0.5em;
 }
