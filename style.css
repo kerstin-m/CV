@@ -39,10 +39,10 @@ header {
 }
 
 main {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
+  max-width: auto;
+  margin: auto;
   color: var(--main-color);
+  display: flex;
 }
 
 @media screen and (min-width: 786px) {
@@ -78,7 +78,7 @@ main {
 footer {
   color: var(--main-color);
   background: var(--background-footer);
-  /*Wie kann ich die Farbschattierung umdrehen? Über die Keywords schaffe ich es nicht?*/
+  padding-block: 1em;
 }
 .profession {
   font-size: 25%;
@@ -86,9 +86,11 @@ footer {
 
 #contact {
   text-align: center;
-  padding: 1em;
+  margin-top: 1em;
+  padding: 2em 1em 1em 1em;
 }
 .navigation {
+  display: inline-block;
   color: var(--main-color);
   padding: 0.25em;
   margin: 0.25em;
@@ -133,17 +135,19 @@ header:hover .hireme {
     display: none;
   }
 }
-
-.beside {
+/* Wie anordnen?*/
+aside {
   max-width: 40ch;
   background-color: var(--background-beside);
   width: 25%;
   position: sticky;
   padding-bottom: 0;
-  padding-left: 0, 5rem;
-  padding-bottom: 0, 5rem;
+  padding-left: 0.5rem;
 }
 
+.Profil-und-mehr {
+  display: block;
+}
 .ÜberschriftKontaktblock {
   text-align: left;
 
@@ -203,10 +207,9 @@ a:hover {
   background-color: var(--background-beside);
 }
 
-/*Warum verhält sich focus wie aktive? */
 a:focus {
-  background-color: (var(--background-selection));
-  border: 0.01em dotted #34495e;
+  background-color: var(--background-selection);
+  outline: 0.05em dotted #34495e;
 }
 
 a:active {
